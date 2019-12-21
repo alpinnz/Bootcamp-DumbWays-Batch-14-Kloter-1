@@ -60,6 +60,17 @@
             box-sizing: border-box;
         }
 
+        input[type=radio] {
+            padding: 10px 20px;
+            margin: 8px 5px 0 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+
+
         input[type=submit] {
             width: 100%;
             background-color: #4CAF50;
@@ -81,7 +92,7 @@
     <div class="wrapper">
         <div class="content">
             <div class="container">
-                <h1>data</h1>
+                <h1>DATA</h1>
                 <form action="">
                     <label for="fullname">Nama Lengkap</label>
                     <input type="text" name="fullname" placeholder="nama lengkap ...">
@@ -89,7 +100,7 @@
                     <input type="text" name="placeofbirth" placeholder="tempat lahir ...">
                     <label for="dateofpbirth">Tenggal Lahir</label>
                     <input type="date" name="dateofbirth">
-                    <label for="nohp">No Hp</label>
+                    <label for="nohp">No.Hp</label>
                     <input type="text" name="nohp" placeholder="no hp ...">
                     <label for="alamat">Alamat</label>
                     <textarea name="alamat" cols="30" rows="10" placeholder="alamat ..."></textarea>
@@ -107,6 +118,10 @@
                         <option value="S2">S2</option>
                         <option value="S3">S3</option>
                     </select>
+                    <label for="religion">Agama</label><br>
+                    <input type="radio" name="religion" value="Islam">Islam<br>
+                    <input type="radio" name="religion" value="Islam">Kristen<br>
+                    <input type="radio" name="religion" value="Islam">Katolik<br>
                 </form>
             </div>
 
