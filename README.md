@@ -7,10 +7,13 @@ soal no 1 : 1.html
 ![1](https://user-images.githubusercontent.com/51067047/71308527-55848600-2430-11ea-9001-d72539bd3de3.JPG)
 
 soal no 2 : 2.js
+![2](https://user-images.githubusercontent.com/51067047/71308563-c166ee80-2430-11ea-9939-a0f9c63af373.JPG)
 
 soal no 3 : 3.js
+![3](https://user-images.githubusercontent.com/51067047/71308564-c166ee80-2430-11ea-8cea-e2b880948e72.JPG)
 
 soal no 4 : 4.js
+![4](https://user-images.githubusercontent.com/51067047/71308562-c166ee80-2430-11ea-8340-dd9abc15469e.JPG)
 
 soal no 5 : 5.sql('berisi QUERY') (berserta pendukung img(5-1.jpg,5-2.jpg,5-3.jpg) DB(Database-5-6-count.sql('bisa di import')))
 ![5-1](https://user-images.githubusercontent.com/51067047/71308470-a778dc00-242f-11ea-9ff2-cbf56cddec64.JPG)
