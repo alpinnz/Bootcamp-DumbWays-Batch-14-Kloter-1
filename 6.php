@@ -1,3 +1,26 @@
+<?php
+// config
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "";
+$dbname = "count";
+// untuk tulisan bercetak tebal silakan sesuaikan dengan detail database Anda
+// membuat koneksi
+$koneksi = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+// mengecek koneksi
+if (!$koneksi) {
+    printf("Connect failed: %s\n", mysqli_connect_error());
+    exit();
+}else{
+    $query = "SELECT * FROM tb_caleg ";
+    $result = mysqli_query($koneksi, $query);
+    if($result === FALSE) {
+        return printf('Data Erorr');
+        exit();
+    }
+}
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -25,7 +48,7 @@
         </div>
         <div class="content mt-4">
             <div class="container">
-                <table class="table table-bordered text-center align-middle border-0 shadow-lg">
+                <table class="table table-bordered text-center align-middle shadow-lg">
                     <thead>
                         <tr>
                             <th scope="col" colspan="2">Caleg</th>
@@ -33,19 +56,23 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php
+                        while($data = mysqli_fetch_array($result)){ ?>
                         <tr>
                             <th class="text-left" scope="row" colspan="2">
-                                nama
+                                nama<?php echo $data['name']; ?>
                             </th>
-                            <th scope="row" colspan="2" rowspan="4">
+                            <th scope="row" colspan="2" rowspan="2">
                                 <button type="button" class="btn btn-danger">TOMBOL TAMBAH</button>
                             </th>
                         </tr>
                         <tr>
                             <th class="text-left" scope="row" colspan="2">
-                                Perolehan suara:
+                                Perolehan suara: <?php echo $data['earned_vote']; ?>
                             </th>
                         </tr>
+                        <?php
+                        } ?>
                     </tbody>
                 </table>
             </div>
