@@ -36,8 +36,9 @@ UPDATE tb_caleg SET name="Is Bos", id_partai="2", earned_vote = "70" WHERE id=1;
 DELETE tb_caleg WHERE id=4;
 
 -- Tampilkan data caleg beserta nama partai yang di inisialisasikan menjadi partai menggunakan syntax JOIN.
-SELECT tb_caleg.id AS ID, tb_caleg.name AS Nama, tb_partai.name AS Partai, tb_caleg.earned_vote AS Vote FROM tb_caleg INNER JOIN tb_partai ON tb_caleg.id_partai = tb_partai.id WHERE tb_caleg.id = '3' ;
+SELECT tb_caleg.id AS ID, tb_caleg.name AS Nama, tb_partai.name AS Partai, tb_caleg.earned_vote AS Vote FROM tb_caleg INNER JOIN tb_partai ON tb_caleg.id_partai = tb_partai.id ;
 
 -- Tampilkan data caleg dengan nama “Kabur” beserta nama partai yang mengusung.
+SELECT tb_caleg.id AS ID, tb_caleg.name AS Nama, tb_partai.name AS Partai, tb_caleg.earned_vote AS Vote FROM tb_caleg INNER JOIN tb_partai ON tb_caleg.id_partai = tb_partai.id WHERE tb_caleg.id = '3' ;
 
 
