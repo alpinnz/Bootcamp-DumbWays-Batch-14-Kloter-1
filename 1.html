@@ -60,24 +60,33 @@
             box-sizing: border-box;
         }
 
-        input[type=radio] {
-            padding: 10px 20px;
-            margin: 8px 5px 0 0;
+        .form-group {
+            width: 100%;
+            padding: 4px 20px;
+            margin: 0px 5px;
             display: inline-block;
-            border: 1px solid #ccc;
+            /* border: 1px solid #ccc; */
             border-radius: 4px;
             box-sizing: border-box;
         }
 
+        .form-group input {
+            margin-right: 8px;
+        }
 
+        span {
+            padding: 0px 10px 0 10px;
+            border-radius: 8px;
+        }
 
         input[type=submit] {
-            width: 100%;
+            /* width: 100%; */
             background-color: #4CAF50;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
             border: none;
+            border-radius: 5px;
             cursor: pointer;
         }
 
@@ -119,9 +128,26 @@
                         <option value="S3">S3</option>
                     </select>
                     <label for="religion">Agama</label><br>
-                    <input type="radio" name="religion" value="Islam">Islam<br>
-                    <input type="radio" name="religion" value="Islam">Kristen<br>
-                    <input type="radio" name="religion" value="Islam">Katolik<br>
+                    <div class="form-group">
+                        <input type="radio" name="religion" value="Islam">
+                        <span style="background-color: steelblue;">Islam</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" name="religion" value="Kristen">
+                        <span style="background-color: steelblue;">Kristen</span>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" name="religion" value="Katolik">
+                        <span style="background-color: steelblue;">Katolik</span>
+                    </div>
+                    <label for="hobi">Hobi</label>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Renang">Renang</div>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Mancing">Mancing</div>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Game">Game</div>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Gibah">Gibah</div>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Programmer">Programmer</div>
+
+                    <input type="submit" value="Submit">
                 </form>
             </div>
 
