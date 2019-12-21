@@ -16,6 +16,7 @@ soal no 4 : 4.js
 ![4](https://user-images.githubusercontent.com/51067047/71308562-c166ee80-2430-11ea-8340-dd9abc15469e.JPG)
 
 soal no 5 : 5.sql('berisi QUERY') (berserta pendukung img(5-1.jpg,5-2.jpg,5-3.jpg) DB(Database-5-6-count.sql('bisa di import')))
+https://raw.githubusercontent.com/alpinnz/Bootcamp-DumbWays-Batch-14-Kloter-1/master/5.sql
 ![5-1](https://user-images.githubusercontent.com/51067047/71308470-a778dc00-242f-11ea-9ff2-cbf56cddec64.JPG)
 ![5-2](https://user-images.githubusercontent.com/51067047/71308471-a8117280-242f-11ea-8314-788363614d8b.JPG)
 ![5-3](https://user-images.githubusercontent.com/51067047/71308472-a8117280-242f-11ea-9a7d-969558122f0c.JPG)
@@ -38,6 +39,7 @@ soal 7 saya mengunakan sama mysql XAMPP;
 
 -> untuk no 7 saya membuat sebuah database bernama('ukm');
 -> query tersedia file -> 7.sql;
+https://raw.githubusercontent.com/alpinnz/Bootcamp-DumbWays-Batch-14-Kloter-1/master/7.sql
 -> ini backup database('ukm') ->Database-7-ukm.sql
 
 -> untuk image -> 7.JPG
