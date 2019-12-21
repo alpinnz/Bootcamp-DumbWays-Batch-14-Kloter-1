@@ -3,16 +3,22 @@
 // password => length-min 8 & 1 huruf kapital
 
 const checkUsername = username => {
-    let Regex = /[a-z]/g;
-    if (username.length === 6) {
-        return Regex.exec(username);
-    } else {
-        return false;
-    }
+    let Regex = /^[a-z]{6,6}$/;
+    return Regex.test(username);
 };
 
-const checkEmail = email => { };
+const checkEmail = email => {
+    let Regex = /^([a-z_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+    return Regex.test(email);
+};
 
 const checkPassword = password => { };
-// console.log(is_username_valid('eka%') ? 'benar' : 'salah') //salah
-console.log(checkUsername("akusapa") ? "benar" : "salah");
+
+// username
+console.log(checkUsername("akuapa") ? "benar" : "salah");
+console.log(checkUsername("akuapaA") ? "benar" : "salah");
+console.log(checkUsername("akupaA") ? "benar" : "salah");
+// email
+console.log(checkEmail("alpinnz@gmail.com") ? "benar" : "salah");
+console.log(checkEmail("alpinnZ@gmail.com") ? "benar" : "salah");
+console.log(checkEmail("alpinnzgmail.com") ? "benar" : "salah");
