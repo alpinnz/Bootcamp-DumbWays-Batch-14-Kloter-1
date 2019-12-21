@@ -81,7 +81,7 @@
 
         input[type=submit] {
             /* width: 100%; */
-            background-color: #4CAF50;
+            background-color: #1E90FF;
             color: white;
             padding: 14px 20px;
             margin: 8px 0;
@@ -91,7 +91,8 @@
         }
 
         input[type=submit]:hover {
-            background-color: #45a049;
+            /* background-color: #45a049; */
+            color: #7CFC00;
         }
     </style>
 </head>
@@ -104,62 +105,72 @@
                 <h1>DATA</h1>
                 <form action="">
                     <label for="fullname">Nama Lengkap</label>
-                    <input type="text" name="fullname" placeholder="nama lengkap ...">
+                    <input type="text" name="fullname" placeholder="nama lengkap ..." required>
                     <label for="placeofbirth">Tempat Lahir</label>
-                    <input type="text" name="placeofbirth" placeholder="tempat lahir ...">
+                    <input type="text" name="placeofbirth" placeholder="tempat lahir ..." required>
                     <label for="dateofpbirth">Tenggal Lahir</label>
-                    <input type="date" name="dateofbirth">
+                    <input type="date" name="dateofbirth" required>
                     <label for="nohp">No.Hp</label>
-                    <input type="text" name="nohp" placeholder="no hp ...">
+                    <input type="text" name="nohp" placeholder="no hp ..." required>
                     <label for="alamat">Alamat</label>
-                    <textarea name="alamat" cols="30" rows="10" placeholder="alamat ..."></textarea>
-                    <label for="lasteducation">Pendidikan Terakhir</label>
-                    <select name="lasteducation">
-                        <option selected value="null">--pilih--</option>
-                        <option value="SD">SD</option>
-                        <option value="SMP">SMP</option>
-                        <option value="SMA">SMA</option>
-                        <option value="SMK">SMK</option>
-                        <option value="D1">D1</option>
-                        <option value="D3">D3</option>
-                        <option value="D4">D4</option>
-                        <option value="S1">S1</option>
-                        <option value="S2">S2</option>
-                        <option value="S3">S3</option>
-                    </select>
-                    <label for="religion">Agama</label><br>
-                    <div class="form-group">
-                        <input type="radio" name="religion" value="Islam">
-                        <span style="background-color: #87CEEB;">Islam</span>
+                    <textarea name="alamat" cols="30" rows="10" placeholder="alamat ..." required></textarea>
+                    <div class="group" required>
+                        <label for="lasteducation">Pendidikan Terakhir</label>
+                        <select name="lasteducation">
+                            <option selected value="null">--pilih--</option>
+                            <option value="SD">SD</option>
+                            <option value="SMP">SMP</option>
+                            <option value="SMA">SMA</option>
+                            <option value="SMK">SMK</option>
+                            <option value="D1">D1</option>
+                            <option value="D3">D3</option>
+                            <option value="D4">D4</option>
+                            <option value="S1">S1</option>
+                            <option value="S2">S2</option>
+                            <option value="S3">S3</option>
+                        </select>
                     </div>
-                    <div class="form-group">
-                        <input type="radio" name="religion" value="Kristen">
-                        <span style="background-color: #87CEFA;">Kristen</span>
+
+                    <div class="group" required>
+                        <label for="religion">Agama</label><br>
+                        <div class="form-group">
+                            <input type="radio" name="religion" value="Islam">
+                            <span style="background-color: #87CEEB;">Islam</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="religion" value="Kristen">
+                            <span style="background-color: #87CEFA;">Kristen</span>
+                        </div>
+                        <div class="form-group">
+                            <input type="radio" name="religion" value="Katolik">
+                            <span style="background-color: 	#7FFF00;">Katolik</span>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <input type="radio" name="religion" value="Katolik">
-                        <span style="background-color: 	#7FFF00;">Katolik</span>
+
+                    <div class="group" required>
+                        <label for="hobi">Hobi</label>
+                        <div class="form-group"><input type="checkbox" name="hobi" value="Renang">
+                            <span style="background-color: #87CEEB;">Renang</span>
+                        </div>
+                        <div class="form-group"><input type="checkbox" name="hobi" value="Mancing">
+                            <span style="background-color: #87CEFA;">Mancing</span>
+                        </div>
+                        <div class="form-group"><input type="checkbox" name="hobi" value="Game">
+                            <span style="background-color: #87CEFA;">Game</span>
+                        </div>
+                        <div class="form-group"><input type="checkbox" name="hobi" value="Gibah">
+                            <span style="background-color: #90EE90;">Gibah</span>
+                        </div>
+                        <div class="form-group"><input type="checkbox" name="hobi" value="Programmer">
+                            <span style="background-color: #FAFAD2;">Programmer</span>
+                        </div>
                     </div>
-                    <label for="hobi">Hobi</label>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Renang">
-                        <span style="background-color: #87CEEB;">Renang</span>
-                    </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Mancing">
-                        <span style="background-color: #87CEFA;">Mancing</span>
-                    </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Game">
-                        <span style="background-color: #87CEFA;">Game</span>
-                    </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Gibah">
-                        <span style="background-color: #90EE90;">Gibah</span>
-                    </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Programmer">
-                        <span style="background-color: #FAFAD2;">Programmer</span>
-                    </div>
+
                     <br>
                     <br>
 
                     <input type="submit" value="Submit">
+                    <input type="submit" value="Edit label">
                 </form>
             </div>
 
