@@ -1,26 +1,7 @@
 <?php
-// config
-$dbhost = "localhost";
-$dbuser = "root";
-$dbpass = "";
-$dbname = "count";
-// untuk tulisan bercetak tebal silakan sesuaikan dengan detail database Anda
-// membuat koneksi
-$koneksi = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-// mengecek koneksi
-if (!$koneksi) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}else{
-    $query = "SELECT * FROM tb_caleg ";
-    $result = mysqli_query($koneksi, $query);
-    if($result === FALSE) {
-        return printf('Data Erorr');
-        exit();
-    }
-}
+include("6-koneksi.php");
+$koneksi -> close();
 ?>
-
 <!doctype html>
 <html lang="en">
 
@@ -57,17 +38,22 @@ if (!$koneksi) {
                     </thead>
                     <tbody>
                         <?php
+                        include("6-koneksi.php");
+                        $query = "SELECT * FROM tb_caleg ";
+                        $result = mysqli_query($koneksi, $query);
+                        if($result === FALSE) {
+                            return printf('Data Erorr');
+                            exit();
+                        }
                         while($data = mysqli_fetch_array($result)){ ?>
                         <tr>
                             <th class="text-left font-weight-bold" scope="row" colspan="2">
                                 <i class="fas fa-user mr-2"></i><?php echo $data['name']; ?>
                             </th>
                             <th scope="row" colspan="2" rowspan="2">
-                                <form action="6.php" method="POST">
-                                    <input type="hidden" name="id_caleg" value="<?php echo $data['id']; ?>">
-                                    <input type="hidden" name="earned_vote" value="<?php echo $data['earned_vote']; ?>">
-                                    <button type="submit" name="submit" class="btn btn-danger">TOMBOL TAMBAH</button>
-                                </form>
+                                <a class="btn btn-danger" href="6-update.php?id=<?php echo $data['id']; ?>&vote=<?php echo $data['earned_vote']; ?>">
+                                TOMBOL TAMBAH
+                                </a>
                             </th>
                         </tr>
                         <tr>
@@ -84,23 +70,6 @@ if (!$koneksi) {
             </div>
         </div>
     </div>
-
-    <?php
-    $koneksi = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
-    // mengecek koneksi
-    if (!$koneksi) {
-        printf("Connect failed: %s\n", mysqli_connect_error());
-        exit();
-    }else{
-        $query = "SELECT * FROM tb_caleg ";
-        $result = mysqli_query($koneksi, $query);
-        if($result === FALSE) {
-            return printf('Data Erorr');
-            exit();
-        }
-    }
-    ?>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
