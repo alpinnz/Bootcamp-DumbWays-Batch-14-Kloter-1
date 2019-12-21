@@ -23,5 +23,17 @@ INSERT INTO orders (id, customer_id, order_placed_date) VALUES
 (9, '2', '2019-010-12'),
 (10, '2', '2019-11-21');
 
-SELECT orders.id AS ID, customers.first_name AS Nama, orders.order_placed_date AS Tanggal FROM orders INNER JOIN customers ON orders.customer_id = customers.id ;
+
+SELECT
+    customers.first_name AS Nama_Pelanggan,
+    customers.email AS Email_Pelanggan,
+    COUNT(email) AS Transaksi
+FROM
+    orders
+INNER JOIN customers ON orders.customer_id = customers.id
+
+WHERE
+    (
+        order_placed_date BETWEEN '2019-01-01' AND '2019-12-31'
+    )GROUP BY email ORDER BY COUNT(email) DESC;
 
