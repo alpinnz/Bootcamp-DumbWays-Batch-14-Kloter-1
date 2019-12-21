@@ -103,7 +103,7 @@
         <div class="content">
             <div class="container">
                 <h1>DATA</h1>
-                <form action="">
+                <form>
                     <label for="fullname">Nama Lengkap</label>
                     <input type="text" name="fullname" placeholder="nama lengkap ..." required>
                     <label for="placeofbirth">Tempat Lahir</label>
@@ -113,7 +113,8 @@
                     <label for="nohp">No.Hp</label>
                     <input type="text" name="nohp" placeholder="no hp ..." required>
                     <label for="alamat">Alamat</label>
-                    <textarea name="alamat" cols="30" rows="10" placeholder="alamat ..." required></textarea>
+                    <textarea style="resize: none;" name="alamat" cols="0" rows="5" placeholder="alamat ..."
+                        required></textarea>
                     <label for="lasteducation">Pendidikan Terakhir</label>
                     <select name="lasteducation">
                         <option selected value="null">--pilih--</option>
@@ -142,26 +143,25 @@
                         <span style="background-color: 	#7FFF00;">Katolik</span>
                     </div>
                     <label for="hobi">Hobi</label>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Renang" required>
-                        <span style="background-color: #87CEEB;">Renang</span>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Renang">
+                        <span style="background-color: #87ceeb;">Renang</span>
                     </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Mancing" required>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Mancing">
                         <span style="background-color: #87CEFA;">Mancing</span>
                     </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Game" required>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Game">
                         <span style="background-color: #87CEFA;">Game</span>
                     </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Gibah" required>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Gibah">
                         <span style="background-color: #90EE90;">Gibah</span>
                     </div>
-                    <div class="form-group"><input type="checkbox" name="hobi" value="Programmer" required>
+                    <div class="form-group"><input type="checkbox" name="hobi" value="Programmer">
                         <span style="background-color: #FAFAD2;">Programmer</span>
                     </div>
                     <br>
                     <br>
 
                     <input type="submit" value="Submit">
-                    <input type="submit" value="Edit label">
                 </form>
             </div>
 
