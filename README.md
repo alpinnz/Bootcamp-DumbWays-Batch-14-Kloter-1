@@ -4,6 +4,8 @@ Seleksi Bootcamp DumbWays Batch 14 Kloter 1
 
 soal no 1 : 1.html
 
+![1](https://user-images.githubusercontent.com/51067047/71308527-55848600-2430-11ea-9001-d72539bd3de3.JPG)
+
 soal no 2 : 2.js
 
 soal no 3 : 3.js
@@ -26,6 +28,8 @@ soal 6 saya mengunakan PHP dan MYSQL di aplikasi
 -> file semua pindahkan ke C:\xampp\htdocs -> 6.php('php') (berserta pendukung file(6-koneksi.php,6-update.php,assets));
 
 -> database create('count') lalu inmport file->Database-5-6-count.sql ke database('count');
+
+![6](https://user-images.githubusercontent.com/51067047/71308529-587f7680-2430-11ea-914d-bcbae64517bd.JPG)
 
 soal 7 saya mengunakan sama mysql XAMPP;
 
