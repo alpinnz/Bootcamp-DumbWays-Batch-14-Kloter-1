@@ -16,6 +16,7 @@
         body,
         html {
             height: 100%;
+            background-color: black;
         }
 
         .wrapper {
@@ -23,6 +24,7 @@
             margin-left: auto;
             padding-right: 10px;
             padding-left: 10px;
+
         }
 
         .container {
@@ -30,6 +32,7 @@
             margin-left: auto;
             padding-right: 15px;
             padding-left: 15px;
+            background-color: white;
         }
 
         .content {
@@ -38,8 +41,15 @@
             border: 1px solid;
         }
 
+        h1 {
+            text-align: center;
+            color: rgb(61, 59, 59);
+        }
+
         input[type=text],
         [type=date],
+        select,
+        textarea,
         select {
             width: 100%;
             padding: 10px 20px;
@@ -79,7 +89,10 @@
                     <input type="text" name="placeofbirth" placeholder="tempat lahir ...">
                     <label for="dateofpbirth">Tenggal Lahir</label>
                     <input type="date" name="dateofbirth">
-
+                    <label for="nohp">No Hp</label>
+                    <input type="text" name="nohp" placeholder="no hp ...">
+                    <label for="alamat">Alamat</label>
+                    <textarea name="alamat" cols="30" rows="10" placeholder="alamat ..."></textarea>
                 </form>
             </div>
 
