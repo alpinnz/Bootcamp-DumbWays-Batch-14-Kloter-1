@@ -1,5 +1,10 @@
 # Bootcamp-DumbWays-Batch-14-Kloter-1
 
+
+![5-1](https://user-images.githubusercontent.com/51067047/71308470-a778dc00-242f-11ea-9ff2-cbf56cddec64.JPG)
+![5-2](https://user-images.githubusercontent.com/51067047/71308471-a8117280-242f-11ea-8314-788363614d8b.JPG)
+![5-3](https://user-images.githubusercontent.com/51067047/71308472-a8117280-242f-11ea-9a7d-969558122f0c.JPG)
+![7](https://user-images.githubusercontent.com/51067047/71308473-a8117280-242f-11ea-9130-e23df3f5a14f.JPG)
 Seleksi Bootcamp DumbWays Batch 14 Kloter 1
 
 soal no 1 : 1.html
