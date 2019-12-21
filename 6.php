@@ -59,25 +59,48 @@ if (!$koneksi) {
                         <?php
                         while($data = mysqli_fetch_array($result)){ ?>
                         <tr>
-                            <th class="text-left" scope="row" colspan="2">
-                                nama<?php echo $data['name']; ?>
+                            <th class="text-left font-weight-bold" scope="row" colspan="2">
+                                <i class="fas fa-user mr-2"></i><?php echo $data['name']; ?>
                             </th>
                             <th scope="row" colspan="2" rowspan="2">
-                                <button type="button" class="btn btn-danger">TOMBOL TAMBAH</button>
+                                <form action="6.php" method="POST">
+                                    <input type="hidden" name="id_caleg" value="<?php echo $data['id']; ?>">
+                                    <input type="hidden" name="earned_vote" value="<?php echo $data['earned_vote']; ?>">
+                                    <button type="submit" name="submit" class="btn btn-danger">TOMBOL TAMBAH</button>
+                                </form>
                             </th>
                         </tr>
                         <tr>
                             <th class="text-left" scope="row" colspan="2">
-                                Perolehan suara: <?php echo $data['earned_vote']; ?>
+                                <i class="fas fa-vote-yea mr-2"></i>Perolehan suara : <?php echo $data['earned_vote']; ?>
                             </th>
                         </tr>
                         <?php
-                        } ?>
+                        } 
+                        $koneksi -> close();
+                        ?>
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
+
+    <?php
+    $koneksi = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+    // mengecek koneksi
+    if (!$koneksi) {
+        printf("Connect failed: %s\n", mysqli_connect_error());
+        exit();
+    }else{
+        $query = "SELECT * FROM tb_caleg ";
+        $result = mysqli_query($koneksi, $query);
+        if($result === FALSE) {
+            return printf('Data Erorr');
+            exit();
+        }
+    }
+    ?>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
