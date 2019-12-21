@@ -12,13 +12,28 @@ const checkEmail = email => {
     return Regex.test(email);
 };
 
-const checkPassword = password => { };
+const checkPassword = password => {
+    let Regex1 = /[a-z0-9]/g;
+    let Regex2 = /[a-z]/g;
+    let Regex3 = /[A-Z]{1}/g;
+    if (password.length > 8) {
+        if (Regex1.test(password) && Regex2.test(password) && Regex3.test(password)) {
+            return true;
+        }
+    }
+    return false;
+};
 
 // username
-console.log(checkUsername("akuapa") ? "benar" : "salah");
-console.log(checkUsername("akuapaA") ? "benar" : "salah");
-console.log(checkUsername("akupaA") ? "benar" : "salah");
+console.log(checkUsername("akuapa") ? "benar" : "salah"); //benar
+console.log(checkUsername("akuapaA") ? "benar" : "salah"); //salah
+console.log(checkUsername("akupaA") ? "benar" : "salah"); //salah
 // email
-console.log(checkEmail("alpinnz@gmail.com") ? "benar" : "salah");
-console.log(checkEmail("alpinnZ@gmail.com") ? "benar" : "salah");
-console.log(checkEmail("alpinnzgmail.com") ? "benar" : "salah");
+console.log(checkEmail("alpinnz@gmail.com") ? "benar" : "salah"); //benar
+console.log(checkEmail("alpinnZ@gmail.com") ? "benar" : "salah"); //salah
+console.log(checkEmail("alpinnzgmail.com") ? "benar" : "salah"); //salah
+
+// email
+console.log(checkPassword("testpassworA") ? "benar" : "salah"); //benar
+console.log(checkPassword("alpinnZgmailcom") ? "benar" : "salah"); //benar
+console.log(checkPassword("alpinnmailcom") ? "benar" : "salah"); //salah
